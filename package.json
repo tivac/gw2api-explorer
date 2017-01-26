@@ -1,0 +1,31 @@
+{
+  "name": "gw2api-explorer",
+  "version": "1.0.0",
+  "description": "API Explorer for api.guildwars2.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/wright.js"
+  },
+  "author": "Pat Cavit <github@patcavit.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-arenanet": "^3.1.0",
+    "modular-css": "^2.0.2",
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-json": "^2.1.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "wright": "github:porsager/wright"
+  },
+  "dependencies": {
+    "mithril": "^1.0.0-rc.8",
+    "purecss": "^0.6.2"
+  },
+  "eslintConfig": {
+    "extends": "arenanet",
+    "env": {
+      "browser": true
+    }
+  }
+}

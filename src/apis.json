@@ -1,0 +1,15 @@
+{
+    "v2" : {
+        "quaggans" : {
+            "bulk" : true,
+            "auth" : false,
+            "lang" : false,
+            "all"  : true,
+
+            "data" : {
+                "id"  : "id",
+                "url" : "Quaggan image location"
+            }
+        }
+    }
+}
