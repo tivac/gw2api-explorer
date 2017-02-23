@@ -1,6 +1,7 @@
 import m from "mithril";
 
 import apis from "./apis.json";
+import details from "./details.js";
 
 var versions = Object.keys(apis);
 
@@ -29,7 +30,7 @@ m.route(document.body, "/", {
             m("h1", `/${vnode.attrs.version}`),
             Object.keys(apis.v2).map((api) =>
                 m("p",
-                    m("a", { href     : `/${vnode.attrs.version}/${api}`, oncreate : m.route.link },
+                    m("a", { href : `/${vnode.attrs.version}/${api}`, oncreate : m.route.link },
                         `/${vnode.attrs.version}/${api}`
                     )
                 )
@@ -37,9 +38,5 @@ m.route(document.body, "/", {
         )
     },
 
-    "/:version/:api..." : {
-        view : (vnode) => m("div",
-            m("h1", `/${vnode.attrs.version}/${vnode.attrs.api}`)
-        )
-    }
+    "/:version/:api..." : details
 });

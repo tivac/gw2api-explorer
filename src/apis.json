@@ -1,14 +1,19 @@
 {
     "v2" : {
         "quaggans" : {
-            "bulk" : true,
+            "name" : "/v2/quaggans",
+            "url"  : "/v2/quaggans",
+            
             "auth" : false,
             "lang" : false,
             "all"  : true,
+            "http" : "GET",
+
+            "info" : "Return a list of available Quaggan images. Not to be taken too seriously!",
 
             "data" : {
-                "id"  : "id",
-                "url" : "Quaggan image location"
+                "id"  : "Quaggan ID",
+                "url" : "Quaggan image URL"
             }
         }
     }
