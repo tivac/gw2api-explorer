@@ -3,6 +3,8 @@
 var wright = require("wright"),
     rollup = require("rollup").rollup;
 
+let previousBundle;
+
 wright({
     main  : "public/index.html",
     debug : true,
@@ -13,12 +15,17 @@ wright({
         compile : () =>
             rollup({
                 entry   : "src/index.js",
+                cache   : previousBundle,
                 plugins : [
                     require("rollup-plugin-node-resolve")(),
                     require("rollup-plugin-commonjs")(),
                     require("rollup-plugin-json")(),
                 ]
             })
-            .then((bundle) => bundle.generate({ format : "iife" }).code)
+            .then((bundle) => {
+                previousBundle = bundle;
+
+                return bundle.generate({ format : "iife" }).code;
+            })
     }
 });
