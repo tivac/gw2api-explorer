@@ -16,11 +16,8 @@ wright({
                     require("rollup-plugin-node-resolve")(),
                     require("rollup-plugin-commonjs")(),
                     require("rollup-plugin-json")(),
-                    // require("modular-css/rollup")({
-                        
-                    // })
                 ]
             })
-            .then((bundle) => bundle.generate({ format: 'iife' }).code)
+            .then((bundle) => bundle.generate({ format : "iife" }).code)
     }
 });
