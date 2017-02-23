@@ -9,6 +9,7 @@ wright({
     run   : "m.redraw",
     js    : {
         watch   : "src/**/*.js",
+        path    : "/js/app.js",
         compile : () =>
             rollup({
                 entry   : "src/index.js",
