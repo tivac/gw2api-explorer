@@ -1,9 +1,8 @@
 "use strict";
 
 var wright = require("wright"),
-    rollup = require("rollup").rollup;
-
-let previousBundle;
+    rollup = require("rollup").rollup,
+    previousBundle;
 
 wright({
     main  : "public/index.html",
